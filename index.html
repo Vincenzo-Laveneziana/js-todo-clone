@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Titolo e icona -->
-  <title>Titolo</title>
+  <title>Google Keep</title>
+  <link rel="icon" href="img/keep.png">
 
   <!-- Css -->
   <link rel="stylesheet" href="css/main.css">
-  <link rel="icon" href="">
+  
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -20,12 +23,39 @@
 
 <body>
 
+  <header class="flex flex_center_center">
+    <img src="img/keep.png" alt="logo">
+    <h1>Keep</h1>
+  </header>
 
+  <main>
+
+    <div class="container flex align_center">
+      <input type="text" class="add_element" placeholder="Scrivi una nota... ">
+      
+      <ul class="todo flex ">
+        <li class="element">Elemento <i class="fas fa-times"></i></li>
+        <li class="element">Elemento <i class="fas fa-times"></i></li>
+        <li class="element">Elemento <i class="fas fa-times"></i></li>
+
+      </ul>
+    </div>
+    
+    <div class="templates">
+      <li class="element"><i class="fas fa-times"></i></li>
+    </div>
+
+
+
+
+
+
+  </main>
 
 
   <!-- JS -->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
   
 </body>
