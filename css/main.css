@@ -47,6 +47,11 @@ body{
   color: #b93b3b;
 }
 
+.completed span{
+  color: green;
+  text-decoration: line-through;
+}
+
 
 /* Header */
 header {
@@ -104,6 +109,10 @@ header h1{
 
 .container ul li:last-child{
   border-bottom: none;
+}
+
+.container ul li span{
+  cursor: pointer;
 }
 
 

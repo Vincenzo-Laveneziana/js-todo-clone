@@ -10,7 +10,8 @@ $(document).ready(function () {
   ];
 
   var list = $(".todo");
-  var newInput = $(".add_element")
+  var newInput = $(".add_element");
+  var boolean = false;
 
   for(var i = 0; i < todoList.length; i++){
 
@@ -48,12 +49,32 @@ $(document).ready(function () {
     }
   })
 
-  $(".todo li i").mouseenter(function(){
+  //quando entro dentro alla x seleziona elemento che vuoi eliminare
+  $("main").on("mouseenter", ".todo li i", function(){
     $(this).parent().toggleClass("line-through");
+
+    if ($(this).parent().hasClass("completed")){
+      
+      boolean = true;
+      $(this).parent().toggleClass('completed');
+    }
   });
 
-  $(".todo li i").mouseleave(function(){
+  //quando esco ritorna alla normalità
+  $("main").on("mouseleave", ".todo li i", function(){
     $(this).parent().toggleClass("line-through");
+
+    if (boolean == true){
+      
+      boolean = false;
+      $(this).parent().toggleClass('completed');
+    }
+  });
+
+
+  //seleziono un evento completato
+  $("main").on("click", ".todo li", function(){
+    $(this).toggleClass('completed');
   });
 
 
