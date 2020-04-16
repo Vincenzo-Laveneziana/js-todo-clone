@@ -108,11 +108,11 @@ header h1{
   color: red;
 }
 
-.templates{
+.template{
   display: none;
 }
 
-.templates li{
+.template li{
   list-style: none;
 }
 
