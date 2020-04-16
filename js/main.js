@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   //Dati
   var todoList = [
-    "Sistemare il sito dell'Inps ",
+    "Sistemare il sito dell'Inps",
     "Assicurarsi che la terra non sia piatta",
     "Scoprire dov'è Bugo",
     "Cercare molte più Gif"
@@ -18,7 +18,7 @@ $(document).ready(function () {
     var elementList = $(".template li").clone();
 
     //aggiungere del testo al template
-    elementList.prepend('<span> ' + todoList[i] + '</span>');
+    elementList.prepend('<span>' + todoList[i] + '</span>');
 
     //aggiungere il clone alla lista de
     list.append(elementList);
@@ -48,12 +48,12 @@ $(document).ready(function () {
     }
   })
 
-  $("main").on("mouseenter", ".todo li", function(){
-    $(this).toggleClass("line-through");
+  $(".todo li i").mouseenter(function(){
+    $(this).parent().toggleClass("line-through");
   });
 
-  $("main").on("mouseleave", ".todo li", function(){
-    $(this).not("i").toggleClass("line-through");
+  $(".todo li i").mouseleave(function(){
+    $(this).parent().toggleClass("line-through");
   });
 
 
