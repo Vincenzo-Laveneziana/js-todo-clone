@@ -51,29 +51,33 @@ $(document).ready(function () {
 
   //quando entro dentro alla x seleziona elemento che vuoi eliminare
   $("main").on("mouseenter", ".todo li i", function(){
-    $(this).parent().toggleClass("line-through");
+    
 
     if ($(this).parent().hasClass("completed")){
-      
+
+      $(this).parent().toggleClass("line-through");
       boolean = true;
-      $(this).parent().toggleClass('completed');
+
+    } else{
+      $(this).parent().toggleClass("line-through");
     }
+
+    
   });
 
   //quando esco ritorna alla normalità
   $("main").on("mouseleave", ".todo li i", function(){
     $(this).parent().toggleClass("line-through");
 
-    if (boolean == true){
-      
+    /* if (boolean == true){
+      $(this).parent().toggleClass('completed'); 
       boolean = false;
-      $(this).parent().toggleClass('completed');
-    }
+    } */
   });
 
 
   //seleziono un evento completato
-  $("main").on("click", ".todo li", function(){
+  $("main").on("click", ".todo li span", function(){
     $(this).toggleClass('completed');
   });
 

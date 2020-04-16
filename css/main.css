@@ -47,7 +47,7 @@ body{
   color: #b93b3b;
 }
 
-.completed span{
+.completed{
   color: green;
   text-decoration: line-through;
 }
